@@ -50,26 +50,25 @@ datasource
 persistent
     Utilizar o no una conexión persistente a la base de datos.
 host
-    The database server's hostname (or IP address).
+    La dirección IP o el nombre de host del servidor de base de datos.
 login
-    The username for the account.
+    Nombre de usuario de la cuenta.
 password
-    The password for the account.
+    Contraseña para la cuenta.
 database
-    The name of the database for this connection to use.
-prefix (*optional*)
-    The string that prefixes every table name in the database. If your
-    tables don't have prefixes, set this to an empty string.
+    Nombre de la base de datos que utilizará la conexión.
+prefix (*opcional*)
+    Prefijo que se agrega al nombre de todas las tablas en la base de datos.
+    Si tus tablas no poseen prefijos, dejar vacío.
 port (*optional*)
-    The TCP port or Unix socket used to connect to the server.
+    El puerto TCP o  socket Unix usado para connectar al servidor.
 encoding
-    Indicates the character set to use when sending SQL statements to
-    the server. This defaults to the database's default encoding for
-    all databases other than DB2. If you wish to use UTF-8 encoding
-    with mysql/mysqli connections you must use 'utf8' without the
-    hyphen.
+    Indica el juego de caracteres a utilizar cuando se envian comandos SQL a
+    el servidor. Se utilizará la codificación predeterminada de la base de datos
+    para todas las bases de datos excepto DB2. Si deseas utilizar codificación UTF-8 
+    con mysql/mysqli debes usar 'utf8' sin los guiones.
 schema
-    Used in PostgreSQL database setups to specify which schema to use.
+    Usado en bases de datos PostgreSQL para especificar que esquema utilizar.
 unix_socket
     Used by drivers that support it to connect via unix socket files. If you are
     using postgres and want to use unix sockets, leave the host key blank.
