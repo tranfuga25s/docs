@@ -1,7 +1,7 @@
-Configuration
+Configuracion
 #############
 
-Configuring a CakePHP application is a piece of cake. After you
+Configurar una applicacion  CakePHP is a piece of cake. After you
 have installed CakePHP, creating a basic web application requires
 only that you setup a database configuration.
 
