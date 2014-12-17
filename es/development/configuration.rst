@@ -1,26 +1,27 @@
 Configuracion
 #############
 
-Configurar una applicacion  CakePHP is a piece of cake. After you
-have installed CakePHP, creating a basic web application requires
-only that you setup a database configuration.
+Configurar una applicacion CakePHP es pan comido. Luego de que has
+instalado CakePHP, crear unaa application web basica requiere solo
+que configures la base de datos.
 
-There are, however, other optional configuration steps you can take
-in order to take advantage of CakePHP flexible architecture. You
-can easily add to the functionality inherited from the CakePHP
-core, configure additional/different URL mappings (routes), and
-define additional/different inflections.
+Sin embargo, hay otros pasos de configurar que se pueden utilizar 
+para utilizar la arquitectura flexible de CakePHP. Puedes agregar
+facilmente funcionalidades nuevas a las heredadas desde el nucleo
+de CakePHP, agregar o modificar diferentes mapeos de URL (routes),
+y definir reglas de infleccion adicionales o diferentes.
 
 .. index:: database.php, database.php.default
 .. _database-configuration:
 
-Database Configuration
-======================
+Configuracion de la Base de Datos
+=================================
 
-CakePHP expects database configuration details to be in a file at
-``app/Config/database.php``. An example database configuration file can
-be found at ``app/Config/database.php.default``. A finished
-configuration should look something like this::
+CakePHP espera que los detalles de configuración para la base de datos
+se encuentren ubicados en un archivo en ``app/Config/database.php``. 
+Un ejemplo de este archivo de configuracion puede ser encontrado en 
+``app/Config/database.php.default``. La configuracion final debería de 
+ser algo similar a esto::
 
     class DATABASE_CONFIG {
         public $default = array(
