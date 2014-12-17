@@ -70,42 +70,42 @@ encoding
 schema
     Usado en bases de datos PostgreSQL para especificar que esquema utilizar.
 unix_socket
-    Used by drivers that support it to connect via unix socket files. If you are
-    using postgres and want to use unix sockets, leave the host key blank.
+    Usado por drivers que suportan coneccion mediante archivos de socket unix. Si estas
+    utilizando postgres y quieres oncextarte mediante sockets, deja en blanco el nombre
+    de host.
 ssl_key
-    The file path to the SSL key file. (Only supported by MySQL, requires PHP
+    La ruta al archivo de clave SSL. ( Solo soportado por MySQL, requiere PHP
     5.3.7+).
 ssl_cert
-    The file path to the SSL certificate file. (Only supported by MySQL,
-    requires PHP 5.3.7+).
+    La ruta al archivo de certificado SSL. (Solo soportado por MySQL,
+    requiere PHP 5.3.7+).
 ssl_ca
-    The file path to the SSL certificate authority. (Only supported by MySQL,
-    requires PHP 5.3.7+).
+    La ruta al archivo de certificado de autoridad SSL. (Solo soportado por MySQL,
+    requiere PHP 5.3.7+).
 settings
-    An array of key/value pairs that should be sent to the database server as
-    ``SET`` commands when the connection is created. This option is only
-    supported by MySQL, Postgres, and SQLserver at this time.
+    Un arreglo de clave/valor que seran enviados al servidor mediante comandos 
+    ``SET`` cuando la conexión es creada. Esta opción solo está soportada por 
+    MySQL, Postgres, y SQLserver en este momento.
 
 .. versionchanged:: 2.4
-    The ``settings``, ``ssl_key``, ``ssl_cert`` and ``ssl_ca`` keys
-    was added in 2.4.
+    Las claves ``settings``, ``ssl_key``, ``ssl_cert`` y ``ssl_ca`` fueron
+    agregadas en la versión 2.4.
 
 .. note::
 
-    The prefix setting is for tables, **not** models. For example, if
-    you create a join table for your Apple and Flavor models, you name
-    it prefix\_apples\_flavors (**not**
-    prefix\_apples\_prefix\_flavors), and set your prefix setting to
-    'prefix\_'.
+    El prefixo es para las tablas, **no** modelos. Por ejemplo, si 
+    creas una tabla de union entre Apple y Flavor, el nombre de la tabla
+    será prefix\_apples\_flavors (**no** prefix\_apples\_prefix\_flavors), 
+    y setea el prefijo a 'prefix\_'.
 
-At this point, you might want to take a look at the
-:doc:`/getting-started/cakephp-conventions`. The correct
-naming for your tables (and the addition of some columns) can score
-you some free functionality and help you avoid configuration. For
-example, if you name your database table big\_boxes, your model
-BigBox, your controller BigBoxesController, everything just works
-together automatically. By convention, use underscores, lower case,
-and plural forms for your database table names - for example:
+En este punto sería recomentable de que le peges una mirada a
+:doc:`/getting-started/cakephp-conventions`. Nombrar las tablas correctamente
+( y la adicion de algunas columnas ) puede agregar funcionalidad
+gratuita y evitarte configuraciones extras. Por ejemplo, si tu tabla
+ tiene el nombre caja\_grande, tu modelo CajaGrande, tu controlador
+ CajaGrandeController, todo trabaja automaticamente junto. por convencion
+ usa guión bajo, minusculas, y plural en los nombres de las tablas - 
+ Por ejemplo:
 bakers, pastry\_stores, and savory\_cakes.
 
 .. todo::
