@@ -113,16 +113,16 @@ bakers, pastry\_stores, and savory\_cakes.
     Add information about specific options for different database
     vendors, such as SQLServer, Postgres and MySQL.
 
-Additional Class Paths
-======================
+Rutas de Clases Adicionales
+===========================
 
-It's occasionally useful to be able to share MVC classes between
-applications on the same system. If you want the same controller in
-both applications, you can use CakePHP's bootstrap.php to bring
-these additional classes into view.
+Ocacionalmente es util la habilidad de compartir clases MVC entre
+aplicaciones del mismo sistema.. Si quieres tener el mismo controlador
+en dos aplicación, puedes utilizar el archivo bootstrap.php de CakePHP
+para traer esas clases a tu aplicacion.
 
-By using :php:meth:`App::build()` in bootstrap.php we can define additional
-paths where CakePHP will look for classes::
+Utilizando :php:meth:`App::build()` en bootstrap.php podemos definir 
+rutas adiciones en donde CakePHP buscará por clases::
 
     App::build(array(
         'Model' => array(
@@ -201,15 +201,15 @@ paths where CakePHP will look for classes::
 
 .. note::
 
-    All additional path configuration should be done at the top of your application's
-    bootstrap.php. This will ensure that the paths are available for the rest of your
-    application.
+    Toda ruta adicional configurada debería de ser hecha al principio de el archivo
+    bootstrap.php de tu aplicacion. Esto asegura que las rutas agregadas estan disponibles
+    para el resto de la aplicación.
 
 
 .. index:: core.php, configuration
 
-Core Configuration
-==================
+Configuración del nucleo
+========================
 
 Each application in CakePHP contains a configuration file to
 determine CakePHP's internal behavior.
