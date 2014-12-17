@@ -35,22 +35,20 @@ ser algo similar a esto::
         );
     }
 
-The $default connection array is used unless another connection is
-specified by the ``$useDbConfig`` property in a model. For example, if
-my application has an additional legacy database in addition to the
-default one, I could use it in my models by creating a new $legacy
-database connection array similar to the $default array, and by
-setting ``public $useDbConfig = 'legacy';`` in the appropriate models.
+El array de conexión $default es utilizado excepto que se especifique 
+la propiedad ``$useDbConfig`` en un modelo. Por ejemplo, si mi aplicación
+tiene una base de datos antigua además de la predeterminada, podría utilizarla
+en mis modelos creando un nuevo array de conexión similar a $default, y 
+colocar ``public $useDbConfig = 'legacy';`` en los modelos que corresponda.
 
-Fill out the key/value pairs in the configuration array to best
-suit your needs.
+Completa los pares clave/valor en la configuración según tus necesidades.
 
 datasource
-    The name of the datasource this configuration array is for.
-    Examples: Database/Mysql, Database/Sqlserver, Database/Postgres, Database/Sqlite.
-    You can use :term:`plugin syntax` to indicate plugin datasource to use.
+    El nombre de la fuente de datos que utiliza esta array de conexión.
+    Ejemploss: Database/Mysql, Database/Sqlserver, Database/Postgres, Database/Sqlite.
+    Puedes usar la :term:`plugin syntax` para indicar una fuente de datos de un plugin.
 persistent
-    Whether or not to use a persistent connection to the database.
+    Utilizar o no una conexión persistente a la base de datos.
 host
     The database server's hostname (or IP address).
 login
