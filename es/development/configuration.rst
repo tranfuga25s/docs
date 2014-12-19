@@ -1,4 +1,4 @@
-Configuracion
+Configuración
 #############
 
 Configurar una applicacion CakePHP es pan comido. Luego de que has
@@ -14,7 +14,7 @@ y definir reglas de infleccion adicionales o diferentes.
 .. index:: database.php, database.php.default
 .. _database-configuration:
 
-Configuracion de la Base de Datos
+Configuración de la Base de Datos
 =================================
 
 CakePHP espera que los detalles de configuración para la base de datos
@@ -208,10 +208,10 @@ rutas adiciones en donde CakePHP buscará por clases::
 
 .. index:: core.php, configuration
 
-Configuración del nucleo
+Configuración del núcleo
 ========================
 
-Cada aplicación en CakePHP contiene un archivo de configuracion para
+Cada aplicación en CakePHP contiene un archivo de configuración para
 determinar el comportamiento interno.
 ``app/Config/core.php``. Este archivo es una colección de clases de 
 configuración y definiciones de variables y constantes que determinan
@@ -257,31 +257,33 @@ Exception
 .. _core-configuration-baseurl:
 
 App.baseUrl
-    If you don't want or can't get mod\_rewrite (or some other
-    compatible module) up and running on your server, you'll need to
-    use CakePHP's built-in pretty URLs. In ``/app/Config/core.php``,
-    uncomment the line that looks like::
+    Si no deseas o no puede habilitar el modulo mod\_rewrite (o otro módulo compatile)  en tu
+    servidor, necesitarás utilizar el embellecedor de URLs integrado en CakePHP. 
+    En ``/app/Config/core.php``, descomenta la linea que es similar a::
 
         Configure::write('App.baseUrl', env('SCRIPT_NAME'));
 
-    Also remove these .htaccess files::
+    Además elimina los archivos .htaccess en las siguientes ubicaciones::
 
         /.htaccess
         /app/.htaccess
         /app/webroot/.htaccess
 
 
-    This will make your URLs look like
-    www.example.com/index.php/controllername/actionname/param rather
-    than www.example.com/controllername/actionname/param.
+    Esto hará que las URLs de tu aplicacion sean simiar a esto:
+    www.example.com/index.php/controllername/actionname/param 
+    en vez de 
+    www.example.com/controllername/actionname/param.
 
-    If you are installing CakePHP on a webserver besides Apache, you
-    can find instructions for getting URL rewriting working for other
-    servers under the :doc:`/installation/url-rewriting` section.
+    Si estas instalando CakePHP en un servidor web que no es Apache, puedes
+    encontrar instrucciones de como habilitar la reescritura de URL para
+    otros servidores en la seccion :doc:`/installation/url-rewriting`.
+    
 App.encoding
-    Define what encoding your application uses. This encoding
-    is used to generate the charset in the layout, and encode entities.
-    It should match the encoding values specified for your database.
+    Define que codificación de caracteres utiliza tu aplicación. Esta codificacion
+    es usada para generar el juego de caracteres en el layout, y codificar entidades.
+    Debería de ser la misma que está especificada en tu base de datos.
+    
 Routing.prefixes
     Un-comment this definition if you'd like to take advantage of
     CakePHP prefixed routes like admin. Set this variable with an array
