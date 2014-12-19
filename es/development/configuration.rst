@@ -211,16 +211,16 @@ rutas adiciones en donde CakePHP buscará por clases::
 Configuración del nucleo
 ========================
 
-Each application in CakePHP contains a configuration file to
-determine CakePHP's internal behavior.
-``app/Config/core.php``. This file is a collection of Configure class
-variable definitions and constant definitions that determine how
-your application behaves. Before we dive into those particular
-variables, you'll need to be familiar with :php:class:`Configure`, CakePHP's
-configuration registry class.
+Cada aplicación en CakePHP contiene un archivo de configuracion para
+determinar el comportamiento interno.
+``app/Config/core.php``. Este archivo es una colección de clases de 
+configuración y definiciones de variables y constantes que determinan
+como tu aplicación se comportará. Antes de ingrear en variables en 
+particular, es necesario que familiarices con :php:class:`Configure`, 
+la clase de registro de configuraciones de CakePHP's.
 
-CakePHP Core Configuration
---------------------------
+Configuration del nucleo CakePHP
+--------------------------------
 
 The :php:class:`Configure` class is used to manage a set of core CakePHP
 configuration variables. These variables can be found in
