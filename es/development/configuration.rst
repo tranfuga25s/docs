@@ -248,13 +248,11 @@ Error
     * ``trace`` - boolean - Incluir historial de funciones llamadas en los archivos de log.
 
 Exception
-    Configure the Exception handler used for uncaught exceptions. By default,
-    ErrorHandler::handleException() is used. It will display a HTML page for
-    the exception, and while debug > 0, framework errors like
-    Missing Controller will be displayed. When debug = 0,
-    framework errors will be coerced into generic HTTP errors.
-    For more information on Exception handling, see the :doc:`exceptions`
-    section.
+    Configura el gestor de excepciones utilizado para las excepciones no retenidoas. De manera
+    predeterminada ErrorHandler::handleException() es usado. Mostrará una pagina HTML para 
+    la excepcion, y mientras debug > 0, los errores tales como Missing Controller serán mostrados.
+    Cuando debug = 0, los errores del framework serán convertidos en errores genericos HTTP.
+    Para más información sobre el manejo de excepciones, vea la sección :doc:`exceptions`.
 
 .. _core-configuration-baseurl:
 
