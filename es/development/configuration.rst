@@ -222,30 +222,30 @@ la clase de registro de configuraciones de CakePHP's.
 Configuration del nucleo CakePHP
 --------------------------------
 
-The :php:class:`Configure` class is used to manage a set of core CakePHP
-configuration variables. These variables can be found in
-``app/Config/core.php``. Below is a description of each variable and
-how it affects your CakePHP application.
+La clase :php:class:`Configure` es usada para administar un conjunto de
+variables de configuración del núcleo de CakePHP. Esas variables pueden
+ser encontradas en ``app/Config/core.php``. A continuación una descripcion
+de cada variable y como afecta tu aplicación CakePHP.
 
 debug
-    Changes CakePHP debugging output.
-    0 = Production mode. No output.
-    1 = Show errors and warnings.
-    2 = Show errors, warnings, and SQL. [SQL log is only shown when you
-    add $this->element('sql\_dump') to your view or layout.]
+    Cambia la salida de información de depuración de CakePHP.
+    0 = Modo Produccion. Sin salida.
+    1 = Muestra errores y alertas.
+    2 = Muestra errores, alertas y comandos SQL. [Los comandos SQL son mostrados
+    solamente cuando agregas ``$this->element('sql\_dump')`` en el layout.]
 
 Error
-    Configure the Error handler used to handle errors for your application.
-    By default :php:meth:`ErrorHandler::handleError()` is used. It will display
-    errors using :php:class:`Debugger`, when debug > 0
-    and log errors with :php:class:`CakeLog` when debug = 0.
+    Configura el gestor de errores utilizado para administrar los errores de tu
+    aplicación. De manera predeterminada se utiliza :php:meth:`ErrorHandler::handleError()`.
+    Mostrará los errores utilizando :php:class:`Debugger`, cuando debug > 0
+    y cuando debug = 0 registrará los errores en el log con :php:class:`CakeLog`.
 
-    Sub-keys:
+    Sub-claves:
 
-    * ``handler`` - callback - The callback to handle errors. You can set this to any
-      callback type, including anonymous functions.
-    * ``level`` - int - The level of errors you are interested in capturing.
-    * ``trace`` - boolean - Include stack traces for errors in log files.
+    * ``handler`` - retrollamada - La función que se llamará para manejar los errores.
+    Puedes colocar cualquier tipo de retrollamada, incluyendo funciones anonimas.
+    * ``level`` - int - El nivel de error que estas interesado en capturar.
+    * ``trace`` - boolean - Incluir historial de funciones llamadas en los archivos de log.
 
 Exception
     Configure the Exception handler used for uncaught exceptions. By default,
