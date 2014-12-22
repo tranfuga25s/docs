@@ -285,23 +285,21 @@ App.encoding
     Debería de ser la misma que está especificada en tu base de datos.
     
 Routing.prefixes
-    Un-comment this definition if you'd like to take advantage of
-    CakePHP prefixed routes like admin. Set this variable with an array
-    of prefix names of the routes you'd like to use. More on this
-    later.
+    Descomenta esta definición si deseas obtener las ventajas de las rutas prefijadas
+    de CakePHP como admin. Coloca esta variable del prefijo de nombres que deseas usar
+    Mas información mas adelante.
 Cache.disable
-    When set to true, persistent caching is disabled site-wide.
-    This will make all read/writes to :php:class:`Cache` fail.
+    Cuando está colocado en verdadero, el cache persistente está deshabilitado en todo 
+    el sistema. Esto hará que todas las escrituras/lecturas a :php:class:`Cache` fallen.
 Cache.check
-    If set to true, enables view caching. Enabling is still needed in
-    the controllers, but this variable enables the detection of those
-    settings.
+    Si está seteado en verdader, habilita el cache de vistas. Habilitacion en el controlador
+    es necesario, pero esta variable es la que habilita la detección de esas preferencias.
 Session
-    Contains an array of settings to use for session configuration. The defaults key is
-    used to define a default preset to use for sessions, any settings declared here will override
-    the settings of the default config.
+    Contiene un arreglo de las preferencias para usar como configuración de la sesión.
+    La clave predeterminada es usada para definir la configuración predeterminada para usar
+    en la sesiones, cualquier preferencia declarada aquí sera sobreescrita.
 
-    Sub-keys
+    Sub-claves
 
     * ``name`` - The name of the cookie to use. Defaults to 'CAKEPHP'
     * ``timeout`` - The number of minutes you want sessions to live for.
