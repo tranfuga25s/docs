@@ -301,29 +301,31 @@ Session
 
     Sub-claves
 
-    * ``name`` - The name of the cookie to use. Defaults to 'CAKEPHP'
-    * ``timeout`` - The number of minutes you want sessions to live for.
-      This timeout is handled by CakePHP
-    * ``cookieTimeout`` - The number of minutes you want session cookies to live for.
-    * ``checkAgent`` - Do you want the user agent to be checked when starting sessions?
-      You might want to set the value to false, when dealing with older versions of
-      IE, Chrome Frame or certain web-browsing devices and AJAX
-    * ``defaults`` - The default configuration set to use as a basis for your session.
-      There are four builtins: php, cake, cache, database.
-    * ``handler`` - Can be used to enable a custom session handler.
-      Expects an array of callables, that can be used with `session_save_handler`.
-      Using this option will automatically add `session.save_handler` to the ini array.
-    * ``autoRegenerate`` - Enabling this setting, turns on automatic renewal
-      of sessions, and sessionids that change frequently.
-      See :php:attr:`CakeSession::$requestCountdown`.
-    * ``ini`` - An associative array of additional ini values to set.
+    * ``name`` - El nombre que se usa en la `cookie`. Normalmente es 'CAKEPHP'.
+    * ``timeout`` - El numero de minutos que deseas que la sesión tenga vida.
+      Este tipo es manejado por CakePHP.
+    * ``cookieTimeout`` - El número de munitos que deseas que la `cookie` de sesión viva.
+    * ``checkAgent`` - Deseas que la cadena de agente de usuario sea verificada cuando se
+      inicia la sesión? Puede ser que desees colocar este valor en falso, cuando estas 
+      lidiando con versiones viejas de IE, Chrome Frame o ciertos dispositivos que navegan
+       y pedidos AJAX.
+    * ``defaults`` - El valor predeterminado para usar como base para tu sesiones.
+      Los cuatro valores incluidos son: php, cake, cache, database.
+    * ``handler`` - Puede ser usado para habilitar administradores de sesión personalizados.
+      Espera un arreglo de funciones llamables (callables), que puede ser utilizado con
+      `session_save_handler`. Usando esta opción agregará automaticamente `session.save_handler`
+      a las opciones de ini.
+    * ``autoRegenerate`` - Habilitando esta preferencia, habilita la renovación automatica
+      de sesiones, y sessionsids que cambian frequentemente.
+      Vea :php:attr:`CakeSession::$requestCountdown`.
+    * ``ini`` - Un array asociative de valores adiciones para utilizar con ini.
 
-    The built-in defaults are:
+    Los valores predeterminados son:
 
-    * 'php' - Uses settings defined in your php.ini.
-    * 'cake' - Saves session files in CakePHP's /tmp directory.
-    * 'database' - Uses CakePHP's database sessions.
-    * 'cache' - Use the Cache class to save sessions.
+    * 'php' - Utiliza las preferencias definidas en tu archivo php.ini.
+    * 'cake' - Guarda los archivos de sesion en el directorio /tmp de CakePHP.
+    * 'database' - Usa sesiones en base de datos de CakePHP.
+    * 'cache' - Usa la clase de Cache para guardar las sesiones.
 
     To define a custom session handler, save it at ``app/Model/Datasource/Session/<name>.php``.
     Make sure the class implements :php:interface:`CakeSessionHandlerInterface`
