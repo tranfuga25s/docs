@@ -327,18 +327,20 @@ Session
     * 'database' - Usa sesiones en base de datos de CakePHP.
     * 'cache' - Usa la clase de Cache para guardar las sesiones.
 
-    To define a custom session handler, save it at ``app/Model/Datasource/Session/<name>.php``.
-    Make sure the class implements :php:interface:`CakeSessionHandlerInterface`
-    and set Session.handler to <name>
+    Para definir un administrador de sesiones personalizado, agregado en 
+    ``app/Model/Datasource/Session/<nombre>.php``. Asegurate de que la clase implementa
+    :php:interface:`CakeSessionHandlerInterface` y coloca la clave Session.handler
+    a <nombre>
 
-    To use database sessions, run the ``app/Config/Schema/sessions.php`` schema using
-    the cake shell command: ``cake schema create Sessions``
+    Para utilizar las sesiones en base de datos, ejecuta el esquema 
+    ``app/Config/Schema/sessions.php`` usando el comando de consola: 
+    ``cake schema create Sessions``
 
 Security.salt
-    A random string used in security hashing.
+    Una cadena aleatora utilizada para hashing seguro.
 Security.cipherSeed
-    A random numeric string (digits only) used to encrypt/decrypt
-    strings.
+    Una cadena aleator numerica (solo digitos) usado para encriptar y 
+    desencrimptar cadenas.
 Asset.timestamp
     Appends a timestamp which is last modified time of the particular
     file at the end of asset files URLs (CSS, JavaScript, Image) when
