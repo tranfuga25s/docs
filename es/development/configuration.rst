@@ -342,36 +342,35 @@ Security.cipherSeed
     Una cadena aleator numerica (solo digitos) usado para encriptar y 
     desencrimptar cadenas.
 Asset.timestamp
-    Appends a timestamp which is last modified time of the particular
-    file at the end of asset files URLs (CSS, JavaScript, Image) when
-    using proper helpers.
-    Valid values:
-    (boolean) false - Doesn't do anything (default)
-    (boolean) true - Appends the timestamp when debug > 0
-    (string) 'force' - Appends the timestamp when debug >= 0
+    Agrega una cadena temporal conteniendo la ultima modificación de los
+    archivos de contenido (CSS, JavaScript, Image) en la url de descarga
+    cuando se utiliza los ayudantes.
+    Los valores validos son:
+    (boolean) false - No hace nada (predeterminado)
+    (boolean) true - Agrega la cadena de tiempo cuando debug > 0
+    (string) 'force' - Agrega la cadena de tiempo cuando debug >= 0
 Acl.classname, Acl.database
-    Constants used for CakePHP's Access Control List functionality. See
-    the Access Control Lists chapter for more information.
+    Constantess usadas por el Control de Acceso por Lista (ACL) de CakePHP's.
+    Vea el capítulo de Control de Acceso por Lista para más información.
 
 .. note::
-    Cache configuration is also found in core.php — We'll be covering
-    that later on, so stay tuned.
+    La configuración de Cache también se encuentra en core.php — Cubriremos eso
+    más adelante, sigue leyendo..
 
-The :php:class:`Configure` class can be used to read and write core
-configuration settings on the fly. This can be especially handy if
-you want to turn the debug setting on for a limited section of
-logic in your application, for instance.
+La clase :php:class:`Configure` puede se utilizada para leer y escribir preferencias
+del núcleo al vuelo. Esto es especialmente útil si deseas cambiar el valor de debug
+en una sección específica de tu código para verificar la lógica de tu aplicación.
 
-Configuration Constants
------------------------
+Constantes de Configuración
+---------------------------
 
-While most configuration options are handled by Configure, there
-are a few constants that CakePHP uses during runtime.
+Mientras la mayoría de las opciones de configuracion son manejadas por Configure, existen
+algunas pocas constantes que CakePHP usas durante su ejecución.
 
 .. php:const:: LOG_ERROR
 
-    Error constant. Used for differentiating error logging and
-    debugging. Currently PHP supports LOG\_DEBUG.
+    Constante de Error. Usada para diferenciar el registro de errores y depuración. Actualmente
+    PHP soporta LOG\_DEBUG.
 
 Core Cache Configuration
 ------------------------
