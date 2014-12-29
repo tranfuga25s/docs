@@ -372,15 +372,15 @@ algunas pocas constantes que CakePHP usas durante su ejecución.
     Constante de Error. Usada para diferenciar el registro de errores y depuración. Actualmente
     PHP soporta LOG\_DEBUG.
 
-Core Cache Configuration
-------------------------
+Configuracion del Cache del Nucleo
+----------------------------------
 
-CakePHP uses two cache configurations internally. ``_cake_model_`` and ``_cake_core_``.
-``_cake_core_`` is used to store file paths, and object locations. ``_cake_model_`` is
-used to store schema descriptions, and source listings for datasources. Using a fast
-cache storage like APC or Memcached is recommended for these configurations, as
-they are read on every request. By default both of these configurations expire every
-10 seconds when debug is greater than 0.
+CakePHP usa dos configuraciones de cache internamente. ``_cake_model_`` y ``_cake_core_``.
+``_cake_core_`` es usado para guardar la ruta de archivos y ubicaciones de objectos. 
+``_cake_model_`` es usado para guardar descripciones de esquemas, y listado de fuentes
+para fuentes de datos. Usando a fast cache storage like APC or Memcached is recommended 
+for these configurations, as they are read on every request. By default both of these 
+configurations expire every 10 seconds when debug is greater than 0.
 
 As with all cached data stored in :php:class:`Cache` you can clear data using
 :php:meth:`Cache::clear()`.
