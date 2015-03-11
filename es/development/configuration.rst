@@ -428,7 +428,7 @@ contexto estatico::
         El termino :term:`dot notation` usado en la ``$key`` puede ser utilizado para
         organizar tu configuración en grupos logicos.
 
-    El ejemplo de arriba puede ser escribo en una siemple sentencia::
+    El ejemplo de arriba puede ser escribo en una simple sentencia::
 
         Configure::write(
             'Company',
@@ -438,10 +438,10 @@ contexto estatico::
             )
         );
 
-    You can use ``Configure::write('debug', $int)`` to switch between
-    debug and production modes on the fly. This is especially handy for
-    AMF or SOAP interactions where debugging information can cause
-    parsing problems.
+    Puedes usar ``Configure::write('debug', $int)`` para cambiar entre los
+    modos de produción y depuración en vuelo. Esto es especialmente útil 
+    para las interacciones con AMF or SOAP donde la información de depuración
+    puede causar problemas.
 
 .. php:staticmethod:: read($key = null)
 
