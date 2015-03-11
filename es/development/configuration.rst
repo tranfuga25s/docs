@@ -415,20 +415,20 @@ contexto estatico::
 
 .. php:staticmethod:: write($key, $value)
 
-    :param string $key: The key to write, can use be a :term:`dot notation` value.
-    :param mixed $value: The value to store.
+    :param string $key: La clave a escribir, puede ser un valor en :term:`dot notation`.
+    :param mixed $value: El valor a guardar.
 
-    Use ``write()`` to store data in the application's configuration::
+    Usa ``write()`` para guardar información en la configuración de la aplicación::
 
         Configure::write('Company.name','Pizza, Inc.');
         Configure::write('Company.slogan','Pizza for your body and soul');
 
     .. note::
 
-        The :term:`dot notation` used in the ``$key`` parameter can be used to
-        organize your configuration settings into logical groups.
+        El termino :term:`dot notation` usado en la ``$key`` puede ser utilizado para
+        organizar tu configuración en grupos logicos.
 
-    The above example could also be written in a single call::
+    El ejemplo de arriba puede ser escribo en una siemple sentencia::
 
         Configure::write(
             'Company',
