@@ -378,37 +378,38 @@ Configuracion del Cache del Nucleo
 CakePHP usa dos configuraciones de cache internamente. ``_cake_model_`` y ``_cake_core_``.
 ``_cake_core_`` es usado para guardar la ruta de archivos y ubicaciones de objectos. 
 ``_cake_model_`` es usado para guardar descripciones de esquemas, y listado de fuentes
-para fuentes de datos. Usando a fast cache storage like APC or Memcached is recommended 
-for these configurations, as they are read on every request. By default both of these 
-configurations expire every 10 seconds when debug is greater than 0.
+para fuentes de datos. Usando a un almacenamiento de cache rapido como APC or Memcached 
+es recomendado para esas configuraciones, ya uqe son leidas en cada pedido http. De manera
+predeterminada ambas configuracion tienen un tiempo de expiración de 10 segundo cuando el 
+valor de debug es mayor que 0.
 
-As with all cached data stored in :php:class:`Cache` you can clear data using
-:php:meth:`Cache::clear()`.
+Como con todos los datos gurados en :php:class:`Cache` puedes limpiarlos usando :php:meth:`Cache::clear()`.
 
 
-Configure Class
+Clase Configure 
 ===============
 
 .. php:class:: Configure
 
-Despite few things needing to be configured in CakePHP, it's
-sometimes useful to have your own configuration rules for your
-application. In the past you may have defined custom configuration
-values by defining variable or constants in some files. Doing so
-forces you to include that configuration file every time you needed
-to use those values.
+A pesar de que hay pocas cosas que necesitan ser configuradas en CakePHP,
+es util de vez en cuando tener tus propias reglas de configuración para tu
+aplicación. En el pasado podrías haber tenido una configuración personalizada
+definida mediante definición de variables o constantes en archivos. Haciendo
+esto te fuerza a incluir ese archivo de configuración cada vez que necesitas
+utilizar esos valores.
 
-CakePHP's Configure class can be used to store and retrieve
-application or runtime specific values. Be careful, this class
-allows you to store anything in it, then use it in any other part
-of your code: a sure temptation to break the MVC pattern CakePHP
-was designed for. The main goal of Configure class is to keep
-centralized variables that can be shared between many objects.
-Remember to try to live by "convention over configuration" and you
-won't end up breaking the MVC structure we've set in place.
+La clase Configure de CakePHP puede ser utilizara para guardar y obtener
+valores especificos en tiempo de ejecución  o de la aplicación. Se cuidadoso,
+esta clase te permite guardar cualquier cosa en ella, y luego utilizarla en
+otra parte de tu codigo: una segura tentación de romper el patrón MVC sobre
+el cual fue diseñado CakePHP. El principal fin de la clase Configure es
+mantener centradas las variables que pueden ser compartidas entre muchos 
+objectos. Recuerda de tratar de vivir mediante la regla "conveción sobre
+configuración" y no terminarás rompiendo la estructura MVC que se puso en
+CakePHP.
 
-This class can be called from
-anywhere within your application, in a static context::
+Esta clase puede ser llamada en cualquier lugar de tu aplicación, con un
+contexto estatico::
 
     Configure::read('debug');
 
