@@ -445,9 +445,9 @@ contexto estatico::
 
 .. php:staticmethod:: read($key = null)
 
-    :param string $key: The key to read, can use be a :term:`dot notation` value
+    :param string $key: La clave a leer, puede utilizarse la :term:`notación punto`
 
-    Used to read configuration data from the application. Defaults to
+    Usada para leer los datos de configuración para la aplicación. Defaults to
     CakePHP's important debug value. If a key is supplied, the data is
     returned. Using our examples from write() above, we can read that
     data back::
