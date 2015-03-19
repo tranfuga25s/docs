@@ -421,7 +421,7 @@ contexto estatico::
     Usa ``write()`` para guardar información en la configuración de la aplicación::
 
         Configure::write('Company.name','Pizza, Inc.');
-        Configure::write('Company.slogan','Pizza for your body and soul');
+        Configure::write('Company.slogan','Pizza para tu cuerpo y alma');
 
     .. note::
 
@@ -434,7 +434,7 @@ contexto estatico::
             'Company',
             array(
                 'name' => 'Pizza, Inc.',
-                'slogan' => 'Pizza for your body and soul'
+                'slogan' => 'Pizza para tu cuerpo y alma'
             )
         );
 
@@ -447,75 +447,76 @@ contexto estatico::
 
     :param string $key: La clave a leer, puede utilizarse la :term:`notación punto`
 
-    Usada para leer los datos de configuración para la aplicación. Defaults to
-    CakePHP's important debug value. If a key is supplied, the data is
-    returned. Using our examples from write() above, we can read that
-    data back::
+    Usada para leer los datos de configuración para la aplicación. Volviendo a el 
+    importante valor de debug de CakePHP. Si una clave es data, el dato es retornado.
+    Usando nuestros ejemplos de write() de más arriba, podemos leer nuestros datos guardados
+    mediante::
 
-        Configure::read('Company.name');    //yields: 'Pizza, Inc.'
-        Configure::read('Company.slogan');  //yields: 'Pizza for your body
-                                            //and soul'
+        Configure::read('Company.name');    //devuelve: 'Pizza, Inc.'
+        Configure::read('Company.slogan');  //devuelve: 'Pizza para tu cuerpo
+                                            //y alma'
 
         Configure::read('Company');
 
-        //yields:
-        array('name' => 'Pizza, Inc.', 'slogan' => 'Pizza for your body and soul');
+        //devuelve:
+        array('name' => 'Pizza, Inc.', 'slogan' => 'Pizza para tu cuerpo y alma');
 
-    If $key is left null, all values in Configure will be returned.
+    Si la $key es dejada como nula, todos los valores de configuración serán devueltos.
 
 .. php:staticmethod:: check($key)
 
-    :param string $key: The key to check.
+    :param string $key: La clave a verificar.
 
-    Used to check if a key/path exists and has not-null value.
+    Usado para verificar si un camino o clave existe y no es nulo.
 
     .. versionadded:: 2.3
-        ``Configure::check()`` was added in 2.3
+        ``Configure::check()`` fue agregada en 2.3
 
 .. php:staticmethod:: delete($key)
 
-    :param string $key: The key to delete, can use be a :term:`dot notation` value
+    :param string $key: Clave a eliminar, puede utilizarse la :term:`notación punto`
 
-    Used to delete information from the application's configuration::
+    Usado para elminar la información de la configuración de la aplicacion::
 
         Configure::delete('Company.name');
 
 .. php:staticmethod:: version()
 
-    Returns the CakePHP version for the current application.
+    Devuelve la versión de CakePHP actual.
 
 .. php:staticmethod:: config($name, $reader)
 
-    :param string $name: The name of the reader being attached.
-    :param ConfigReaderInterface $reader: The reader instance being attached.
+    :param string $name: El nombre del lector de configuración siendo agregado.
+    :param ConfigReaderInterface $reader: La instancia del lector de configuración a agregar.
 
-    Attach a configuration reader to Configure. Attached readers can
-    then be used to load configuration files. See :ref:`loading-configuration-files`
-    for more information on how to read configuration files.
+    Agrega un lecto de configuración a Configure. Los lectores de configuración pueden ser usados
+    para cargar archivos de configuración . Vea :ref:`loading-configuration-files`
+    para mas información acerca de como cargar archivos de configuración.
 
 .. php:staticmethod:: configured($name = null)
 
-    :param string $name: The name of the reader to check, if null
-        a list of all attached readers will be returned.
+    :param string $name: Nombre del lector a checkear, si es nulo
+        devolverá una lista de todos los lectores agregados actualmente.
 
-    Either check that a reader with a given name is attached, or get
-    the list of attached readers.
+    O verifica que un lector con el nombre correspondiente está agregado o lista los lectores
+    de configuración que están configurados en la clase.
 
 .. php:staticmethod:: drop($name)
 
-    Drops a connected reader object.
+    Elimina un lector de configuración.
 
 
-Reading and writing configuration files
-=======================================
+Leyendo y escribiendo archivos de configuración
+===============================================
 
-CakePHP comes with two built-in configuration file readers.
-:php:class:`PhpReader` is able to read PHP config files, in the same
-format that Configure has historically read. :php:class:`IniReader` is
-able to read ini config files. See the `PHP documentation <http://php.net/parse_ini_file>`_
-for more information on the specifics of ini files.
-To use a core config reader, you'll need to attach it to Configure
-using :php:meth:`Configure::config()`::
+CakePHP viene con 2 lectores de configuración incluidos.
+:php:class:`PhpReader` es capaz de leer archivos de configuracion PHP, en el
+mosmo formato que la clase Configura ha leido historicamente. :php:class:`IniReader` es
+capaz de leer archivos de configuración tipo INI. 
+Vea la documentación de `PHP <http://php.net/parse_ini_file>`_ para mas informacion
+sobre los especificos de archivos de configuración ini.
+Para utilizar un lector de configuración del nucleo, necesitarás agregarlo a la clase
+de configuración utilizando :php:meth:`Configure::config()`::
 
     App::uses('PhpReader', 'Configure');
     // Read config files from app/Config
@@ -524,11 +525,11 @@ using :php:meth:`Configure::config()`::
     // Read config files from another path.
     Configure::config('default', new PhpReader('/path/to/your/config/files/'));
 
-You can have multiple readers attached to Configure, each reading
-different kinds of configuration files, or reading from
-different types of sources. You can interact with attached readers
-using a few other methods on Configure. To see check which reader
-aliases are attached you can use :php:meth:`Configure::configured()`::
+Puedes tener multiples lectores agregados al configure, cada lector teniendo diferentes
+tipos de archivos de configuración, o leyendo configuraciones de diferentes ubicaciones.
+Puedes interactuar con los lectores de configuración agregados utilizando algunos otros
+métodos en Configure. Para verificar cual lector de configuracion est agregado utiliza
+:php:meth:`Configure::configured()`::
 
     // Get the array of aliases for attached readers.
     Configure::configured();
@@ -536,35 +537,33 @@ aliases are attached you can use :php:meth:`Configure::configured()`::
     // Check if a specific reader is attached
     Configure::configured('default');
 
-You can also remove attached readers. ``Configure::drop('default')``
-would remove the default reader alias. Any future attempts to load configuration
-files with that reader would fail.
-
+Puedes eliminar lectores agregados. ``Configure::drop('default')``
+eliminara el lector de configuraciòn con nombre default. Cualquier intento de leer datos
+de configuración de ese lector van a fallar.
 
 .. _loading-configuration-files:
 
-Loading configuration files
----------------------------
+Cargando archivos de configuración
+----------------------------------
 
 .. php:staticmethod:: load($key, $config = 'default', $merge = true)
 
-    :param string $key: The identifier of the configuration file to load.
-    :param string $config: The alias of the configured reader.
-    :param boolean $merge: Whether or not the contents of the read file
-        should be merged, or overwrite the existing values.
+    :param string $key: El identificador del archivo de configuración a cargar.
+    :param string $config: El alias que se colocará al lector.
+    :param boolean $merge: Este parametro indica si los contenidos de el lector
+        deben ser mezclados, o sobrescribir los valores de configuración actual.
 
-Once you've attached a config reader to Configure you can load configuration files::
+Una vez que has agregado el lector de configuración a Configure puedes cargar archivos de configuracion mediante::
 
     // Load my_file.php using the 'default' reader object.
     Configure::load('my_file', 'default');
 
-Loaded configuration files merge their data with the existing runtime configuration
-in Configure. This allows you to overwrite and add new values
-into the existing runtime configuration. By setting ``$merge`` to true, values
-will not ever overwrite the existing configuration.
+Los archivos de configuración cargados mezclaran sus valores con los valores existentes en Configure.
+Esto permite sobreescribir y agregar nuevos valores a los valores existentes sobre la marcha. Poniendo
+el parametro ``$merge`` en verdaderotrue, los valores no se sobreescribiran.
 
-Creating or modifying configuration files
------------------------------------------
+Creando o modificando archivos de configuración
+-----------------------------------------------
 
 .. php:staticmethod:: dump($key, $config = 'default', $keys = array())
 
