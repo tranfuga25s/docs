@@ -567,31 +567,30 @@ Creando o modificando archivos de configuración
 
 .. php:staticmethod:: dump($key, $config = 'default', $keys = array())
 
-    :param string $key: The name of the file/stored configuration to be created.
-    :param string $config: The name of the reader to store the data with.
-    :param array $keys: The list of top-level keys to save. Defaults to all
-        keys.
+    :param string $key: El nombre del archivo/elemento de configuracion a ser creado.
+    :param string $config: Nombre del lector de donde se tomarán los valores para escribir.
+    :param array $keys: Los valores padres de clave a guardar. De manera predeterminada es 
+        todos los valores de configuración.
 
-Dumps all or some of the data in Configure into a file or storage system
-supported by a config reader. The serialization format
-is decided by the config reader attached as $config. For example, if the
-'default' adapter is a :php:class:`PhpReader`, the generated file will be a PHP
-configuration file loadable by the :php:class:`PhpReader`
+Guarda todos o algunos de los valores de configuración en un archivo o sistema de almacenamiento
+soportado por el lector de configuraciòn. El ofrmato de serialización es decidido por el lector
+de configuración aregado en $config. Por ejemplo, si el lector para 'default' es :php:class:`PhpReader`,
+el archivo generado sera un archivo de configuración php cargable por :php:class:`PhpReader`.
 
-Given that the 'default' reader is an instance of PhpReader.
-Save all data in Configure to the file `my_config.php`::
+Dado de que el lector de 'default' reader es una instancia de PhpReader.
+Guarda todos los datos de la clase Configure al archivo `my_config.php`::
 
     Configure::dump('my_config.php', 'default');
 
-Save only the error handling configuration::
+guarda solo la configuración de administrador de errores::
 
     Configure::dump('error.php', 'default', array('Error', 'Exception'));
 
-``Configure::dump()`` can be used to either modify or overwrite
-configuration files that are readable with :php:meth:`Configure::load()`
+``Configure::dump()`` puede ser utilizado para modificar o sobreescribir los archivos
+de configuración que son leibles por :php:meth:`Configure::load()`
 
 .. versionadded:: 2.2
-    ``Configure::dump()`` was added in 2.2.
+    ``Configure::dump()`` fue agregado en 2.2.
 
 Storing runtime configuration
 -----------------------------
