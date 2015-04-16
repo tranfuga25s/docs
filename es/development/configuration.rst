@@ -592,30 +592,31 @@ de configuración que son leibles por :php:meth:`Configure::load()`
 .. versionadded:: 2.2
     ``Configure::dump()`` fue agregado en 2.2.
 
-Storing runtime configuration
------------------------------
+Guardando configuración en ejecucion
+------------------------------------
 
 .. php:staticmethod:: store($name, $cacheConfig = 'default', $data = null)
 
-    :param string $name: The storage key for the cache file.
-    :param string $cacheConfig: The name of the cache configuration to store the
-        configuration data with.
-    :param mixed $data: Either the data to store, or leave null to store all data
-        in Configure.
+    :param string $name: La clave de guardador para archivos de cache.
+    :param string $cacheConfig: El nombre de la configuración de cache en donde guardar
+        los datos de configuracion.
+    :param mixed $data: Los datos a guardar, o dejar en nulo para guardar toda la 
+        todos los datos de Configure.
 
-You can also store runtime configuration values for use in a future request.
-Since configure only remembers values for the current request, you will
-need to store any modified configuration information if you want to
-use it in subsequent requests::
+Tmabien puedes guardar datos de ejecución para su uso en futuras solicitudes.
+Ya que configure solo recuerda valores durante la solicitud actual, necesitaras guardar
+guardar cualquier configuración que desees modificar para utilizar en las subsiguientes
+solicitudes::
 
     // Store the current configuration in the 'user_1234' key in the 'default' cache.
     Configure::store('user_1234', 'default');
 
-Stored configuration data is persisted in the :php:class:`Cache` class. This allows
-you to store Configuration information in any storage engine that :php:class:`Cache` can talk to.
+Los datos de configuracion guardados es persistido en la clase :php:class:`Cache`. 
+Eso permite guardar tu información de configuración en cualquier sistema de almacenamiento
+que este soportado por el Cache.
 
-Restoring runtime configuration
--------------------------------
+Restaurando configuracion en ejecución
+--------------------------------------
 
 .. php:staticmethod:: restore($name, $cacheConfig = 'default')
 
