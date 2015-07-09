@@ -620,18 +620,18 @@ Restaurando configuracion en ejecución
 
 .. php:staticmethod:: restore($name, $cacheConfig = 'default')
 
-    :param string $name: The storage key to load.
-    :param string $cacheConfig: The cache configuration to load the data from.
+    :param string $name: La clave de almacenamiento a cargar.
+    :param string $cacheConfig: La configuracion de cache de donde se cargan los datos.
 
-Once you've stored runtime configuration, you'll probably need to restore it
-so you can access it again. ``Configure::restore()`` does exactly that::
+Una vez que has guardado la configuracion en tiempo de ejecucion, probablemente necesites
+volver a colocar el valor original nuevamente. ``Configure::restore()`` hace eso exactamente::
 
     // restore runtime configuration from the cache.
     Configure::restore('user_1234', 'default');
 
-When restoring configuration information it's important to restore it with
-the same key, and cache configuration as was used to store it. Restored
-information is merged on top of the existing runtime configuration.
+Cuando etamos restaurando la información de configuración es imporante restaurarla con la misma
+clave y configuración de cache que fue utilizada al guardarla. La información restaurada se
+mezcla y sobreescribe sobre los datos existentes.
 
 Creating your own Configuration readers
 =======================================
